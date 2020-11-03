@@ -122,17 +122,23 @@ var gameover = function (winner) {
     title[0].textContent = 'There was no winner';
   }
 
-  setTimeout(restart, 2000);
+  setTimeout(() => {
+    restart(winner);
+  }, 2000);
 
 }
 
 
-var restart = function () {
+var restart = function (winner) {
   var boxes = document.getElementsByClassName('space');
   for(var i = 0; i< boxes.length; i++) {
     boxes[i].classList.remove('O','X');
   }
-  matrix.turn = true;
+  if(winner === false) {
+    matrix.turn = false;
+  } else {
+    matrix.turn = true;
+  }
   matrix.moves = 0;
   matrix.table = emptytable;
   document.getElementsByClassName('title')[0].textContent = 'TIC TAC TOE';
