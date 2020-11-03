@@ -1,9 +1,10 @@
-// function initialize () {
-//   var btns = document.getElementsByClassName("empty");
-//   for(var i =0 ; i <btns.length; i++) {
-//     btns[i].addEventListener("click", changestate);
-//   }
-// }
+
+function testing () {
+  var chen = document.getElementsByClassName('boot');
+  console.log(chen[0]);
+}
+
+
 var emptytable = [
   [null, null, null],
   [null, null, null],
@@ -123,6 +124,7 @@ var gameover = function (winner) {
 
 var restart = function () {
   var boxes = document.getElementsByClassName('space');
+  console.log(boxes);
   for(var i = 0; i< boxes.length; i++) {
     boxes[i].classList.remove('O','X');
   }
