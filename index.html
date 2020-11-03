@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src = "./App.js"></script>
+    <link rel = 'stylesheet' href = 'style.css'>
+    <h1 class = 'title'>TIC TAC TOE</h1>
+    <button onclick = "gameover()">restart</button>
+  </head>
+  <body>
+    <div>
+      <div id = 'rows'>
+        <div class = 'space' id = '00' onclick = "changestate(this)"></div>
+        <div class = 'space' id = '01' onclick = "changestate(this)"></div>
+        <div class = 'space' id = '02' onclick = "changestate(this)"></div>
+
+      </div>
+      <div id = 'rows'>
+        <div class = 'space' id = '10' onclick = "changestate(this)"> </div>
+        <div class = 'space' id = '11' onclick = "changestate(this)"> </div>
+        <div class = 'space' id = '12' onclick = "changestate(this)"> </div>
+      </div>
+      <div id = 'rows'>
+        <div class = 'space' id = '20' onclick = "changestate(this)"> </div>
+        <div class = 'space' id = '21' onclick = "changestate(this)"> </div>
+        <div class = 'space' id = '22' onclick = "changestate(this)"> </div>
+      </div>
+    </div>
+  </body>
+</html>
