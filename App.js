@@ -1,7 +1,12 @@
 
-function testing () {
-  var chen = document.getElementsByClassName('boot');
-  console.log(chen[0]);
+function initialize () {
+  var blocks = document.getElementsByClassName('space');
+  for(var spaces of blocks) {
+    spaces.addEventListener('click',(input) => {
+      changestate(input.target);
+    })
+  }
+
 }
 
 
@@ -124,7 +129,6 @@ var gameover = function (winner) {
 
 var restart = function () {
   var boxes = document.getElementsByClassName('space');
-  console.log(boxes);
   for(var i = 0; i< boxes.length; i++) {
     boxes[i].classList.remove('O','X');
   }
